@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Project 1: Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Taste of Kinshasa">
+  <meta name="author" content="Martin Nzimbu Mantinungina">
+
+  <title>Contact | Taste of Kinshasa</title>
+
+  <!-- Project 1: Link to CSS files -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+
+<body onload="showDateTime(); startCountdown();">
+
+  <header>
+    <h1>Taste of Kinshasa &copy; 2026</h1>
+
+    <!-- Project 1: Navigation list with hypertext links -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Food</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact and Reservation Form</h2>
+
+      <!-- Tutorial 9: JavaScript current day and time -->
+      <p id="dateTime"></p>
+
+      <!-- Tutorial 9: Countdown function -->
+      <p id="countdown"></p>
+
+      <!-- Tutorial 7: Create and format a form with multiple field sets -->
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <!-- Tutorial 7: Text input, required field, field length validation -->
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" minlength="3" maxlength="40" required>
+
+          <!-- Tutorial 7: Mobile keyboard type and required email -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <!-- Tutorial 7: Pattern validation -->
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone"
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                 placeholder="123-456-7890">
+        </fieldset>
+
+        <fieldset>
+          <legend>Reservation Details</legend>
+
+          <!-- Tutorial 7: Date/time input -->
+          <label for="visitDate">Visit Date and Time:</label>
+          <input type="datetime-local" id="visitDate" name="visitDate" required>
+
+          <!-- Tutorial 7: Spinner input -->
+          <label for="guests">Number of Guests:</label>
+          <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+
+          <!-- Tutorial 7: Range slider -->
+          <label for="spiceLevel">Preferred Spice Level:</label>
+          <input type="range" id="spiceLevel" name="spiceLevel" min="1" max="10">
+
+          <!-- Tutorial 7: Selection list -->
+          <label for="dish">Favorite Dish:</label>
+          <select id="dish" name="dish">
+            <option value="fumbwa">Fumbwa</option>
+            <option value="pondu">Pondu</option>
+            <option value="makayabu">Makayabu</option>
+            <option value="brochette">Brochette</option>
+          </select>
+
+          <!-- Tutorial 7: Datalist -->
+          <label for="city">City:</label>
+          <input list="cities" id="city" name="city">
+          <datalist id="cities">
+            <option value="Kinshasa">
+            <option value="Brazzaville">
+            <option value="Lubumbashi">
+            <option value="Goma">
+          </datalist>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <!-- Tutorial 7: Radio buttons -->
+          <p>Dining Option:</p>
+          <input type="radio" id="dineIn" name="dining" value="Dine In" checked>
+          <label for="dineIn">Dine In</label>
+
+          <input type="radio" id="takeOut" name="dining" value="Take Out">
+          <label for="takeOut">Take Out</label>
+
+          <!-- Tutorial 7: Check boxes -->
+          <p>Interests:</p>
+          <input type="checkbox" id="music" name="interest" value="Music">
+          <label for="music">Congolese Music</label>
+
+          <input type="checkbox" id="culture" name="interest" value="Culture">
+          <label for="culture">Culture</label>
+
+          <input type="checkbox" id="recipes" name="interest" value="Recipes">
+          <label for="recipes">Recipes</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Message</legend>
+
+          <!-- Tutorial 7: Text area -->
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="6" cols="40"
+                    minlength="10" maxlength="300"
+                    placeholder="Tell us about your favorite Congolese food..." required></textarea>
+        </fieldset>
+
+        <!-- Tutorial 7: Submit and reset buttons -->
+        <input type="submit" value="Submit" onclick="sendAlert()">
+        <input type="reset" value="Cancel">
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Taste of Kinshasa &nbsp; | &nbsp; Food &amp; Culture</p>
+  </footer>
+
+  <script>
+    // Tutorial 9: Create and call a JavaScript function that keeps track of current day and time
+    function showDateTime() {
+      let now = new Date();
+      document.getElementById("dateTime").innerHTML =
+        "Current date and time: " + now.toLocaleString();
+
+      // Tutorial 9: Delay or run command at a specified interval
+      setTimeout(showDateTime, 1000);
+    }
+
+    // Tutorial 9: Send an alert using JavaScript
+    function sendAlert() {
+      alert("Thank you for contacting Taste of Kinshasa!");
+    }
+
+    // Tutorial 9: Use a Math method
+    let specialNumber = Math.round(Math.random() * 100);
+
+    // Tutorial 9: Convert between a number and text
+    let numberAsText = specialNumber.toString();
+    let textAsNumber = Number(numberAsText);
+
+    console.log("Special number as text: " + numberAsText);
+    console.log("Special number converted back to number: " + textAsNumber);
+
+    // Tutorial 9: Countdown function
+    let count = 10;
+
+    function startCountdown() {
+      document.getElementById("countdown").innerHTML =
+        "Special offer countdown: " + count + " seconds";
+
+      count--;
+
+      if (count >= 0) {
+        setTimeout(startCountdown, 1000);
+      } else {
+        document.getElementById("countdown").innerHTML =
+          "Special offer is ready!";
+      }
+    }
+  </script>
+
+</body>
+</html>
