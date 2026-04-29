@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Tutorial 1: Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Taste of Kinshasa food and culture website">
+  <meta name="author" content="Martin Nzimbu Mantinungina">
+
+  <title>Taste of Kinshasa</title>
+
+  <!-- Tutorial 1: Link to CSS files -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+
+  <header>
+    <h1>Taste of Kinshasa &copy; 2026</h1>
+
+    <!-- Tutorial 1: Navigation list with links -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Food</a></li>
+        <li><a href="culture.html">Culture</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Welcome to Taste of Kinshasa, a website about Congolese food, culture, and community.</p>
+
+      <!-- Tutorial 1: Inline image -->
+      <img src="images/food.jpg" alt="Congolese food">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Taste of Kinshasa</p>
+  </footer>
+
+</body>
+</html>
+
+/* Tutorial 2: Background and text formatting */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f1e8;
+  color: #222;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #4b1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tutorial 2: Format navigation list */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Tutorial 2: Pseudo classes for links */
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: #ddd;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:active {
+  color: orange;
+}
+
+/* Tutorial 2: Attribute selector */
+img[src] {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tutorial 2: Pseudo element */
+p::first-letter {
+  font-size: 130%;
+  font-weight: bold;
+}
+
