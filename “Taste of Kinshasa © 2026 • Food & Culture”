@@ -1,0 +1,44 @@
+
+Project 1
+
+ Chapter 1: Intro to HTML
+
+ Metadata (in <head>): charset, viewport, description, author
+ Sectioning/grouping/text-level: header, nav, main, section, article, footer, plus strong, em, span
+ Link to CSS: <link rel="stylesheet" href="styles.css">
+ Navigation list with links: <nav><ul><li><a href=...>
+ Inline images: logo + dish photos (<img src="images/...">)
+ Character references: &copy;, &amp;, &nbsp;
+
+Chapter 2: Intro to CSS 
+
+Format lists (menu categories, nav list)
+ Background + text formatting (colors, fonts, line-height)
+ Pseudo-classes/elements:
+•	links: a:link, a:visited, a:hover, a:active
+•	element: h2::after (add a decorative line)
+   Contextual/attribute selectors (examples):
+•	nav a { ... } (contextual)
+•	a[href^="http"] { ... } (attribute selector)
+
+Chapter 3: Page layouts 
+
+ Block + floating elements
+•	about.html: float chef/restaurant image left with text wrapping
+ Floated layout
+•	about.html or menu.html: float “Chef’s Pick” card
+ Grid layout
+•	gallery.html: CSS Grid for photos
+ Relative/absolute positioning
+•	index.html: “Open Now” badge absolute on top of hero image
+ Overflow handling
+•	menu.html: long descriptions in a box with overflow:auto;
+
+Chapter 5: Mobile design
+
+ Responsive design with @media + flex/flexbox
+•	Make nav/hero/cards flex-based
+ Pulldown menu
+•	On small screens: nav turns into dropdown (common pattern: hamburger + dropdown 
+
+
